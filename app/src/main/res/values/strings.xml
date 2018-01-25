@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Cogini_Project</string>
+
+    <!--Navigation String-->
+    <string name="navigation_home">Home</string>
+    <string name="navigation_folder">Folder</string>
+    <string name="navigation_search">Search</string>
+    <string name="navigation_image">Images</string>
+    <string name="navigation_account">Account</string>
+
 </resources>
