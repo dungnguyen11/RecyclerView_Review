@@ -13,10 +13,10 @@ public class MainActivity extends AppCompatActivity {
 
     //Views
     private RecyclerView mRecyclerView;
-    private RecyclerViewAdapter mAdapter;
+    private Adapter mAdapter;
 
     //Properties
-    ArrayList<Post> mPosts = new ArrayList<>();
+    ArrayList<Object> mPosts = new ArrayList<>();
 
 
     @Override
@@ -33,12 +33,14 @@ public class MainActivity extends AppCompatActivity {
         mPosts.add(post2);
         mPosts.add(post3);
 
+        mPosts.add("The End");
+
 
         //Set up Recycler View
         mRecyclerView = findViewById(R.id.RecyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mAdapter = new RecyclerViewAdapter(mPosts);
+        mAdapter = new Adapter(mPosts);
         mRecyclerView.setAdapter(mAdapter);
 
 

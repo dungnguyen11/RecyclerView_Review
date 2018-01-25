@@ -13,7 +13,7 @@ import com.photoadventure.cogini_project.Model.Post;
  * Created by Sam on 1/25/2018.
  */
 
-public class RecyclerViewHolder extends RecyclerView.ViewHolder{
+public class PostHolder extends RecyclerView.ViewHolder{
     private Post mPost;
 
 
@@ -36,7 +36,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder{
     ImageButton mReadButton;
     ImageButton mBookmarkButton;
 
-    public RecyclerViewHolder(View itemView) {
+    public PostHolder(View itemView) {
         super(itemView);
 
         //Header
@@ -65,7 +65,7 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder{
         mAuthor.setText(mPost.getAuthor());
         mDate.setText(mPost.getDate());
         mTime.setText(mPost.getTime());
-        mView.setText(String.valueOf(mPost.getNumberOfViews()) + " Views");
+        mView.setText(" \u2022 " + String.valueOf(mPost.getNumberOfViews()) + " Views \u2022");
         mHeaderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
